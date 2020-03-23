@@ -49,3 +49,9 @@ def winner(board)
     return "O"
   end
 end
+
+def winner(board)
+  if champion = won?(board)
+    board[champion.first]
+  end
+end
