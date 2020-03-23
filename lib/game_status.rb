@@ -15,13 +15,7 @@ WIN_COMBINATIONS = [
   [2,4,6]
 ]
 def won?(board)
-  if position_taken?(board, index) == true
-    winning_board = []
-  board.include? do |i|
-    WIN_COMBINATIONS[][]
-  end
-    won?(board)
-  else
+  if position_taken?(board, index) == false
     false
 end
 end
