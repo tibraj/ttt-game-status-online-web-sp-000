@@ -17,5 +17,11 @@ WIN_COMBINATIONS = [
 def won?(board)
   if board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
     false
+  elsif board != [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+    winning_board = []
+    board.include? do |i|
+      WIN_COMBINATIONS[][]
+    end
+    won?(board)
 end
 end
