@@ -21,7 +21,7 @@ def won?(board)
     position_taken?(board,combination[0])
     end
 end
-def full(board)
+def full?(board)
   board.all? do |position|
     position == "X" || position == "O"
   end
