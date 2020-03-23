@@ -15,13 +15,4 @@ WIN_COMBINATIONS = [
   [2,4,6]
 ]
 def won?(board)
-  if board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
-    false
-  elsif board != [" ", " ", " ", " ", " ", " ", " ", " ", " "]
-    winning_board = []
-    board.include? do |i|
-      WIN_COMBINATIONS[][]
-    end
-    won?(board)
-end
 end
