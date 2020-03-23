@@ -54,6 +54,6 @@ def winner(board)
   elsif board[index[0]] == "X"
     return "X"
   else
-    return "O
+    return "O"
   end
 end
