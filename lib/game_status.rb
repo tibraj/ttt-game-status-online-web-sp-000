@@ -15,11 +15,19 @@ WIN_COMBINATIONS = [
   [2,4,6]
 ]
 def won?(board)
-  WIN_COMBINATIONS.detect do |winning_com|
-    board[winning_com[0]] == board[winning_com[1]] &&
-    board[winning_com[1]] == board[winning_com[2]] &&
-    position_taken?(board,winning_com[0])
+  WIN_COMBINATIONS.each do |winning_com|
+    index_0 = winning_com|0|
+    index_1 = winning_com|1|
+    index_2 = winning_com|2|
+    position_1 = board[index_0]
+    position_2 = board[index_1]
+    position_3 = board[index_2]
+    if position_1 == "X" && position_2 == "X" && position_3 =="X"
+      return winning_com
+    elsif position_1 == "O" && position_2 == "O" && position_3 =="O"
     end
+  }
+  return false
 end
 def full?(board)
   board.all? do |position|
