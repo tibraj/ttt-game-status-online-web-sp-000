@@ -14,3 +14,12 @@ WIN_COMBINATIONS = [
   [0,4,8],
   [2,4,6]
 ]
+def won?(board)
+  winning_board = []
+  if position_taken? == true
+  board.include? do |i|
+    WIN_COMBINATIONS[][]
+    won?(board)
+  else
+    false
+end
