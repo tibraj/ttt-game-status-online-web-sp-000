@@ -15,7 +15,9 @@ WIN_COMBINATIONS = [
   [2,4,6]
 ]
 def won?(board)
-  WIN_COMBINATIONS.detect do | i |
-    board[i[0]] == board[i[1]] && board[i[1]] == board[[2]] && position_taken?(board, i[0])
-  end
+  WIN_COMBINATIONS.detect do | combination |
+    board[combination[0]] == board[combination[1]] &&
+    board[combination[1]] == board[combination[2]] &&
+    position_taken?(board,combination[0])
+    end
 end
