@@ -19,9 +19,9 @@ def won?(board)
   if position_taken? == true
   board.include? do |i|
     WIN_COMBINATIONS[][]
+  end
     won?(board)
   else
     false
-  end
 end
 end
