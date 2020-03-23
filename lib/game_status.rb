@@ -25,9 +25,9 @@ def won?(board)
     if position_1 == "X" && position_2 == "X" && position_3 =="X"
       return winning_com
     elsif position_1 == "O" && position_2 == "O" && position_3 =="O"
+    else
+      return false
     end
-  }
-  return false
 end
 def full?(board)
   board.all? do |position|
